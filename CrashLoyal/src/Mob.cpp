@@ -293,8 +293,6 @@ bool Mob::isBehind(std::shared_ptr<Mob> otherMob) {
 }
 
 void Mob::processCollision(std::vector<std::shared_ptr<Mob>> otherMobs, double elapsedTime) {
-	//撞到了往回走
-	//撞到塔停下来
 	for (std::shared_ptr<Building> otherBuilding : GameState::buildings) {
 		if (!otherBuilding->isDead()) {
 			float averageOfSzie = (this->GetSize() + otherBuilding->GetSize()) / 2;
