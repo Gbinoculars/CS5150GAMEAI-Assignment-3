@@ -297,7 +297,7 @@ bool Mob::isBehind(std::shared_ptr<Mob> otherMob) {
 		Point dif;
 		dif.x = otherMob->getPosition()->x - this->getPosition()->x;
 		dif.y = otherMob->getPosition()->y - this->getPosition()->y;
-		if (thisMoveDir.x * dif.x + thisMoveDir.y * dif.y < 0) {
+		if (thisMoveDir.x * dif.x + thisMoveDir.y * dif.y > 0) {
 			return true;
 		}
 	}
